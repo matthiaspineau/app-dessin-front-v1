@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 # ignore
-lib
+# lib
 
 # Editor directories and files
 .vscode/*
