@@ -1,0 +1,55 @@
+.c-media {
+    display: inline-block;
+    max-width: 300px;
+}
+
+.c-media img {
+    width: 100%;
+    height: auto;
+}
+
+/*  */
+.viewer-comics {
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    overflow: hidden;
+}
+
+.viewer-comics .overlay{
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+}
+.viewer-comics .close{
+    padding: 10px;
+    color: #fff;
+}
+.viewer-comics .dialog{
+    background: rgba(0,0,0,0.8);
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+    z-index: 22;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.viewer-comics .viewer-comics__media {
+    
+}
+
+.viewer-comics .viewer-comics__media img {
+    max-width: 100%;
+    height: auto;
+}
