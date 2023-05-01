@@ -1,0 +1,311 @@
+/* --------------------------------------- 
+                base 
+------------------------------------------ */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-size: 16px;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* container */
+.container,
+.container-fluid {
+    --bs-gutter-x: 0.75rem;
+    width: 100%;
+    /* padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem); */
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* --------------------------------------- 
+                nav 
+------------------------------------------ */
+.topbar {
+    background-color: #000;
+}
+
+.topbar .nav-li {
+    display: inline-block;
+}
+
+.topbar .nav-li a {
+    display: inline-block;
+    padding: 8px;
+}
+
+/* --------------------------------------- 
+                viewer 
+------------------------------------------ */
+
+.viewer-comics {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    height: 100vh;
+    width: 100vw;
+    /* display: none; */
+    background: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+
+.viewer-comics .close {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.viewer-comics__loading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 100;
+}
+
+.viewer-comics__contain {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 22;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.viewer-comics__settings {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+}
+
+.viewer-comics__content {
+
+    height: calc(100% - 40px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.viewer-comics__medias {
+    display: flex;
+    flex-direction: column;
+    background: #303030;
+}
+
+.viewer-comics__media {
+    margin: 0 auto;
+}
+.viewer-comics__media--pages {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+}
+
+@media (min-width: 576px) {
+    .viewer-comics__media {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    .viewer-comics__media {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 992px) {
+    .viewer-comics__media {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .viewer-comics__media {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .viewer-comics__media {
+        max-width: 900px;
+    }
+}
+
+.c-media {
+    display: inline-block;
+    max-width: 300px;
+}
+
+.c-media img {
+    width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------- 
+              
+------------------------------------------ */
+/* --------------------------------------- 
+              
+------------------------------------------ */
+/* --------------------------------------- 
+              style
+------------------------------------------ */
+#app {
+    min-height: 100vh;
+}
+.main-view {
+    min-height: calc(100vh - 40px);
+    /* min-height: calc(100%); */
+}
+/* --------------------------------------- 
+             
+------------------------------------------ */
+
+/* --------------------------------------- 
+                home 
+------------------------------------------ */
+.block-home {
+    height: calc(100vh - 40px);
+    display: flex;
+    padding-top: 10%;
+    background: rgb(192, 192, 192);
+    overflow-y: auto;
+}
+.block-home__left {
+    padding: 100px;
+    width: 60%;
+    color: #fff;
+}
+.block-home__right {
+    width: 40%;
+}
+.home_wallpaper {
+    background-image: url("../../local-medias/master_and_commander-wallpaper.jpg");
+    background-size: cover;
+}
+.go-view-comics {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.go-view-comics span {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.go-view-comics span:hover {
+    color: #535bf2;
+    border-color: #535bf2;
+    transition: 0.2s;
+}
+/* position: fixed; 
+top: 0; 
+left: 0; 
+
+min-width: 100%;
+min-height: 100%; */
+/* --------------------------------------- 
+             fin - home 
+------------------------------------------ */
+
+.pseudo {
+    font-size: 48px;
+    color: #535bf2;
+}
+.alias {
+    color: grey;
+    font-size: 22px;
+}
+.status_actuel_desc {
+    font-size: 22px;
+}

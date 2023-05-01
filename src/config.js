@@ -13,7 +13,6 @@ const PATH = {
 
     // dev
     // dossier dev - assets
-    URL_LOCAL_UPLOAD: "http://127.0.0.1:5500/local-upload",
     URL_LOCAL_MEDIAS: "http://127.0.0.1:5500/local-medias",
     URL_LOCAL_DATA: "http://127.0.0.1:5500/local-data"
 }

@@ -1,0 +1,10 @@
+.DS_Store
+composer.phar
+/.vscode/
+/node_modules/
+
+/local-medias/
+/local-data/
+/upload/
+
+/exemple/
