@@ -15,6 +15,11 @@
     -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 a {
     font-weight: 500;
     color: #646cff;
@@ -29,7 +34,11 @@ body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    font-size: 16px;
+
 }
+
+
 /* button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -69,4 +78,49 @@ button:focus-visible {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* container */
+.container,
+.container-fluid {
+    --bs-gutter-x: 0.75rem;
+    width: 100%;
+    /* padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem); */
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }

@@ -1,0 +1,47 @@
+.comics {
+    border: 1px solid;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100fr  25px;
+}
+/* .comics-grid {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+}
+.comics-grid {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+} */
+
+.comics .area-media {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    padding: 8px;
+}
+.comics .area-content {
+    grid-column: 2;
+    grid-row: 1 / 2;
+
+    padding: 8px;
+}
+.comics .area-action {
+    grid-column: 2;
+    grid-row: 2 / 3;
+
+    padding: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

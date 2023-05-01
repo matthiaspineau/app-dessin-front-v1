@@ -1,0 +1,18 @@
+{
+    "collection": [
+        {
+            "ref": "la_gargonne",
+            "affiche": "Couverture_2.png",
+            "pages": ["Pages_1.png","Pages_2.png","Pages_3.png","Pages_4.png","Pages_5.png"],
+            "title": "la Gargonne",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis dolor, aut iure inventore reprehenderit tempore ipsa qui nemo optio eos sed debitis incidunt nobis dolores ad, nulla, ducimus consectetur."
+        },
+        {
+            "ref": "jaco_vender",
+            "affiche": "Pages_1.png",
+            "pages": ["Pages_1.png","Pages_2.png","Pages_3.png","Pages_4.png","Pages_5.png"],
+            "title": "Jaco Vender",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis dolor, aut iure inventore reprehenderit tempore ipsa qui nemo optio eos sed debitis incidunt nobis dolores ad, nulla, ducimus consectetur."
+        }
+    ]
+}
