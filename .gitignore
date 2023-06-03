@@ -6,5 +6,6 @@ composer.phar
 /local-medias/
 /local-data/
 /upload/
+/uploads/
 
 /exemple/
