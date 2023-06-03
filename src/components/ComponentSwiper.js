@@ -1,4 +1,4 @@
-function Component() {
+function ComponentSwipper() {
     
     const state = {
         item: ``
@@ -23,4 +23,4 @@ function Component() {
     return setup
 }
 
-export { Component }
+export { ComponentSwipper }

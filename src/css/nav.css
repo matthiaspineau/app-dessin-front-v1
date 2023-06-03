@@ -1,13 +1,39 @@
 /* topbar  */
-.topbar {
-    background-color: #000;
+.navigation {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0px;
+    height: 40px;
 }
 
-.topbar .nav-li {
-    display: inline-block;
+/* ----------------------------------- */
+/* nav-mobile */
+/* ----------------------------------- */
+
+.nav-mobile {
+    position: relative;
+    padding: 0px 15px;
 }
 
-.topbar .nav-li a {
-    display: inline-block;
-    padding: 8px;
+.nav-ul {
+    background: grey;
+}
+
+.nav-mobile .nav-ul {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 0px;
+    height: calc(100vh - 40px);
+
+    overflow: hidden;
+}
+.nav-mobile.is-open .nav-ul {
+    width: 90%;
+    z-index: 9999999;
+}
+.nav-mobile__btn {
+    cursor: pointer;
+    line-height: 40px;
 }
