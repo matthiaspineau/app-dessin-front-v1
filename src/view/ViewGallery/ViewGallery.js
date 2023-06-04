@@ -1,11 +1,4 @@
 import { PATH } from "../../config.js";
-import { ComponentViewer } from "../../components/ComponentViewer.js"
-
-
-const source = {
-    api: PATH.URL_API,
-    medias: PATH.URL_API_MEDIAS
-};
 
 function initView() {
     const appGallery = viewGallery()
@@ -27,19 +20,13 @@ function viewGallery() {
         galleryContain: '.gallery-contain'
     }
     const method = {
-        getDataJson: () => {
-
-        }, 
         renderGallery: async () => {
-       
             let result = await method.fetchMediaGroup(PATH.URL_API, state.groupsMedia)
             let groupsMedia = result.data
-            console.log(groupsMedia)
 
             groupsMedia.forEach(group => {
                 method.createGallery(group)
             })
-
         },
         fetchMediaGroup: async (url, ids) => {
         
@@ -69,9 +56,7 @@ function viewGallery() {
         createGallery: async (group) => {
             let ids = JSON.parse(group.ids_medias).ids_medias
             let resultMedias = await method.fetchMedia(PATH.URL_API, {ids: ids, indexed: true})
-            console.log(resultMedias)
             let medias = resultMedias.data
-
 
             // creation slide
             let slideHtml = ''

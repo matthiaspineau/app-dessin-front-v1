@@ -16,7 +16,9 @@ const source = {
 function viewComics() {
 
     const state = {
-        comics: []
+        comics: [],
+        //groupsMedia: [19, 20], // local
+        groupsMedia: [19, 20], // serveur
     }
     const ui = {
         viewComics: '.view-comics',
@@ -26,12 +28,11 @@ function viewComics() {
     const method = {
         init: async () => {
             document.querySelector(ui.viewComics).innerHTML = template.comicsCollection
-            let result = await method.fetchMediaGroup(PATH.URL_API, [19, 20])
+            let result = await method.fetchMediaGroup(PATH.URL_API, state.groupsMedia)
             state.comics = result.data
 
             let html = ''
             state.comics.forEach(item => {
-                console.log(item)
                 html += method.createComicsCards(item)
             });
             document.querySelector(ui.comicsCollection).innerHTML = html
