@@ -126,9 +126,12 @@ function viewHome() {
             let result = await method.fetchMediaGroup(PATH.URL_API, [21])
             let groupMedia = result.data[0]
             // let params = {"id":['98', '99']}
-            let params  = {"ids": JSON.parse(groupMedia.ids_medias).ids_medias}
+            let params  = {
+                "ids": JSON.parse(groupMedia.ids_medias).ids_medias,
+                "indexed": true
+            }
             let medias = await method.fetchMedia(PATH.URL_API, params)
-            console.log(medias)
+
             let wrapperSlide = document.querySelector('.swiper-wrapper')
             let html = ''
             medias.data.forEach((media, index) => {

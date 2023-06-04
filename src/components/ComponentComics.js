@@ -2,38 +2,54 @@ function ComponentComics(options) {
     const state = {
         source: options.source != undefined ? options.source : '',
         uiId: options.uiId != undefined ? options.uiId : Date.now(),
-        index: options.index != undefined ? options.index : Date.now(),
         prefix: 'comics',
         target: options.target,
-        data: options.data,
+        // comics: options.data,
+        comicsList: options.comicsList != undefined ? options.comicsList : [],
     }
     const ui = {
         open: `.open`,
         close: `.close`,
         target: `${state.target}`,
-        btn1: `.btn-1__${state.index}`
+    }
+    const method = {
+        render: () => {
+            let html = ''
+            state.comicsList.forEach(comics => {
+                html += method.createComicsCards(comics)
+            });
+            document.querySelector(ui.target).innerHTML = html
+        },
+        createComicsCards: (item) => {
+            let html = `<div class="comics-component comics-grid" data-comics-ref="${item.ref}">
+                <div class="area-media">
+                    <div class="area-media__content">
+                        <img src="${state.source}/${item.ref}/${item.affiche}" alt="" />
+                    </div>
+                </div>
+                <div class="area-content">
+                    <div>${item.title}</div>
+                    <div>${item.description}</div>
+                </div>
+                <div class="area-action">
+                    <span class="showComics"
+                        data-comics-ref="${item.ref}"
+                        >
+                        cliquer
+                    </span>
+                </div>
+            </div>`
+
+            return html
+        },
     }
     const template = {
-        comics: `<div class="${state.prefix} comics-grid" data-comics-ref="${state.data.ref}">
-            <div class="area-media">
-                <img src="${state.source}/${state.data.ref}/${state.data.affiche}" alt="" />
-            </div>
-            <div class="area-content">
-                <div>${state.data.title}</div>
-                <div>${state.data.description}</div>
-            </div>
-            <div class="area-action">
-                <span class="btn-1__${state.index} showComics"
-                    data-comics-ref="${state.data.ref}"
-                    >
-                    cliquer
-                </span>
-            </div>
-        </div>`
+        comicsWrapper: ``,
     }
     const setup = {
         state: state,
         ui: ui,
+        method: method,
         template: template
     }
 

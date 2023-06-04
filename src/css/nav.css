@@ -5,6 +5,8 @@
     left: 0;
     right: 0px;
     height: 40px;
+
+    z-index: 999;
 }
 
 /* ----------------------------------- */
@@ -17,7 +19,12 @@
 }
 
 .nav-ul {
-    background: grey;
+    background: #fff;
+}
+
+.nav-mobile .nav-li {
+    padding: 10px 15px;
+    font-size: 18px;
 }
 
 .nav-mobile .nav-ul {

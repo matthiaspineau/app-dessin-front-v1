@@ -4,7 +4,7 @@ document.querySelector('#app').innerHTML = `
             <div class="nav-mobile__btn">Menu</div>
             <ul class="nav-ul">
                 <li class="nav-li"><a href="#" class="r-link" data-link="/" data-view="Home">Home</a></li>
-                <li class="nav-li"><a href="#" class="r-link" data-link="/collection" data-view="Collection">Collection</a></li>
+                <li class="nav-li"><a href="#" class="r-link" data-link="/comics" data-view="Comics">Comics</a></li>
             <ul>
         </div>
     </div>
@@ -35,6 +35,9 @@ function router(link) {
         case 'Collection':
             path = './view/ViewCollection/ViewCollection.js'
         break;
+        case 'Comics':
+            path = './view/ViewComics/ViewComics.js'
+        break;
         default:
             path = './view/ViewHome/ViewHome.js'
             break;
@@ -56,7 +59,7 @@ window.addEventListener("DOMContentLoaded", router('/'));
 for (const link of document.querySelectorAll(".r-link")) {
     link.addEventListener("click", e => {
         e.preventDefault();
-        history.pushState("", "", e.target.dataset.link);
+        // history.pushState("", "", e.target.dataset.link);
         router(e.target.dataset.link);
     });
 }
