@@ -22,6 +22,10 @@
 .main-view {
     min-height: calc(100vh - 40px);
 }
+
+.view-gallery{
+    padding-bottom: 40px;
+}
 /* --------------------------------------- 
              
 ------------------------------------------ */
@@ -83,3 +87,22 @@
     padding-bottom: 25px;
     min-height: 600px;
 }
+
+
+/* --------------------------------------- 
+                gallery
+------------------------------------------ */
+.gallery__card {
+    margin-top: 25px;
+}
+
+.gallery__title {
+    color: #535bf2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* --------------------------------------- 
+            fin gallery
+------------------------------------------ */

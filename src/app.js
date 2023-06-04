@@ -5,6 +5,7 @@ document.querySelector('#app').innerHTML = `
             <ul class="nav-ul">
                 <li class="nav-li"><a href="#" class="r-link" data-link="/" data-view="Home">Home</a></li>
                 <li class="nav-li"><a href="#" class="r-link" data-link="/comics" data-view="Comics">Comics</a></li>
+                <li class="nav-li"><a href="#" class="r-link" data-link="/gallery" data-view="Gallery">Gallery</a></li>
             <ul>
         </div>
     </div>
@@ -21,6 +22,7 @@ const routes = {
     "/contact": { title: "Contact", render: 'ViewContact' },
     "/groups": { title: "Groups", render: 'ViewGroups' },
     "/comics": { title: "Comics", render: 'ViewComics' },
+    "/gallery": { title: "Gallery", render: 'ViewGallery' },
     "/collection": { title: "Collection", render: 'ViewCollection' },
 };
 
@@ -32,11 +34,11 @@ function router(link) {
         case 'Home':
             path = './view/ViewHome/ViewHome.js'
         break;
-        case 'Collection':
-            path = './view/ViewCollection/ViewCollection.js'
-        break;
         case 'Comics':
             path = './view/ViewComics/ViewComics.js'
+            break;
+        case 'Gallery':
+            path = './view/ViewGallery/ViewGallery.js'
         break;
         default:
             path = './view/ViewHome/ViewHome.js'
