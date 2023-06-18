@@ -11,6 +11,7 @@ const source = {
     api: PATH.URL_API,
     medias: PATH.URL_API_MEDIAS,
     size: 'medium'
+    
 };
 
 function viewComics() {
